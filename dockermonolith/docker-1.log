@@ -1,0 +1,263 @@
+REPOSITORY                  TAG        IMAGE ID       CREATED         SIZE
+yurname/ubuntu-tmp-file     latest     bee5d1de6eb6   8 minutes ago   63.2MB
+postgres                    latest     eb634efa7ee4   7 weeks ago     431MB
+nginx                       latest     92b11f67642b   7 weeks ago     187MB
+php                         latest     e18b028d59f3   10 months ago   490MB
+ubuntu                      18.04      f9a80a55f492   10 months ago   63.2MB
+fedora                      latest     be300d2b6d94   11 months ago   190MB
+debian                      bullseye   34b4fa67dc04   11 months ago   124MB
+hello-world                 latest     d2c94e258dcb   11 months ago   13.3kB
+confluentinc/cp-kafka       7.3.2      da23a46211ad   13 months ago   832MB
+confluentinc/cp-zookeeper   7.3.2      8a091961522e   13 months ago   832MB
+
+diff image_nginx.json cont_nginx.json >> docker-1.log
+
+3,5c3,9   
+<         "Id": "sha256:92b11f67642b62bbb98e7e49169c346b30e20cd3c1c034d31087e46924b9312e",
+<         "RepoTags": [
+<             "nginx:latest"
+---
+>         "Id": "6a4918c572221ac5148dc294e991bfd8418a6a03fc1ffbf829f3d61f028ae5c4",
+>         "Created": "2024-04-10T14:29:27.365119189Z",
+>         "Path": "/docker-entrypoint.sh",
+>         "Args": [
+>             "nginx",
+>             "-g",
+>             "daemon off;"
+7,31c11,136
+<         "RepoDigests": [
+<             "nginx@sha256:6db391d1c0cfb30588ba0bf72ea999404f2764febf0f1f196acd5867ac7efa7e"
+<         ],
+<         "Parent": "",
+<         "Comment": "buildkit.dockerfile.v0",
+<         "Created": "2024-02-14T18:24:57Z",
+<         "Container": "",
+<         "ContainerConfig": {
+<             "Hostname": "",
+<             "Domainname": "",
+<             "User": "",
+<             "AttachStdin": false,
+<             "AttachStdout": false,
+<             "AttachStderr": false,
+<             "Tty": false,
+<             "OpenStdin": false,
+<             "StdinOnce": false,
+<             "Env": null,
+<             "Cmd": null,
+<             "Image": "",
+<             "Volumes": null,
+<             "WorkingDir": "",
+<             "Entrypoint": null,
+<             "OnBuild": null,
+<             "Labels": null
+---
+>         "State": {
+>             "Status": "running",
+>             "Running": true,
+>             "Paused": false,
+>             "Restarting": false,
+>             "OOMKilled": false,
+>             "Dead": false,
+>             "Pid": 12351,
+>             "ExitCode": 0,
+>             "Error": "",
+>             "StartedAt": "2024-04-10T14:29:33.705156523Z",
+>             "FinishedAt": "0001-01-01T00:00:00Z"
+>         },
+>         "Image": "sha256:92b11f67642b62bbb98e7e49169c346b30e20cd3c1c034d31087e46924b9312e",
+>         "ResolvConfPath": "/home/fedora/Documents/Virtual/Docker/containers/6a4918c572221ac5148dc294e991bfd8418a6a03fc1ffbf829f3d61f028ae5c4/resolv.conf",
+>         "HostnamePath": "/home/fedora/Documents/Virtual/Docker/containers/6a4918c572221ac5148dc294e991bfd8418a6a03fc1ffbf829f3d61f028ae5c4/hostname",
+>         "HostsPath": "/home/fedora/Documents/Virtual/Docker/containers/6a4918c572221ac5148dc294e991bfd8418a6a03fc1ffbf829f3d61f028ae5c4/hosts",
+>         "LogPath": "/home/fedora/Documents/Virtual/Docker/containers/6a4918c572221ac5148dc294e991bfd8418a6a03fc1ffbf829f3d61f028ae5c4/6a4918c572221ac5148dc294e991bfd8418a6a03fc1ffbf829f3d61f028ae5c4-json.log",
+>         "Name": "/thirsty_elbakyan",
+>         "RestartCount": 0,
+>         "Driver": "overlay2",
+>         "Platform": "linux",
+>         "MountLabel": "",
+>         "ProcessLabel": "",
+>         "AppArmorProfile": "",
+>         "ExecIDs": null,
+>         "HostConfig": {
+>             "Binds": null,
+>             "ContainerIDFile": "",
+>             "LogConfig": {
+>                 "Type": "json-file",
+>                 "Config": {}
+>             },
+>             "NetworkMode": "default",
+>             "PortBindings": {},
+>             "RestartPolicy": {
+>                 "Name": "no",
+>                 "MaximumRetryCount": 0
+>             },
+>             "AutoRemove": false,
+>             "VolumeDriver": "",
+>             "VolumesFrom": null,
+>             "ConsoleSize": [
+>                 32,
+>                 108
+>             ],
+>             "CapAdd": null,
+>             "CapDrop": null,
+>             "CgroupnsMode": "private",
+>             "Dns": [],
+>             "DnsOptions": [],
+>             "DnsSearch": [],
+>             "ExtraHosts": null,
+>             "GroupAdd": null,
+>             "IpcMode": "private",
+>             "Cgroup": "",
+>             "Links": null,
+>             "OomScoreAdj": 0,
+>             "PidMode": "",
+>             "Privileged": false,
+>             "PublishAllPorts": false,
+>             "ReadonlyRootfs": false,
+>             "SecurityOpt": null,
+>             "UTSMode": "",
+>             "UsernsMode": "",
+>             "ShmSize": 67108864,
+>             "Runtime": "runc",
+>             "Isolation": "",
+>             "CpuShares": 0,
+>             "Memory": 0,
+>             "NanoCpus": 0,
+>             "CgroupParent": "",
+>             "BlkioWeight": 0,
+>             "BlkioWeightDevice": [],
+>             "BlkioDeviceReadBps": [],
+>             "BlkioDeviceWriteBps": [],
+>             "BlkioDeviceReadIOps": [],
+>             "BlkioDeviceWriteIOps": [],
+>             "CpuPeriod": 0,
+>             "CpuQuota": 0,
+>             "CpuRealtimePeriod": 0,
+>             "CpuRealtimeRuntime": 0,
+>             "CpusetCpus": "",
+>             "CpusetMems": "",
+>             "Devices": [],
+>             "DeviceCgroupRules": null,
+>             "DeviceRequests": null,
+>             "MemoryReservation": 0,
+>             "MemorySwap": 0,
+>             "MemorySwappiness": null,
+>             "OomKillDisable": null,
+>             "PidsLimit": null,
+>             "Ulimits": [],
+>             "CpuCount": 0,
+>             "CpuPercent": 0,
+>             "IOMaximumIOps": 0,
+>             "IOMaximumBandwidth": 0,
+>             "MaskedPaths": [
+>                 "/proc/asound",
+>                 "/proc/acpi",
+>                 "/proc/kcore",
+>                 "/proc/keys",
+>                 "/proc/latency_stats",
+>                 "/proc/timer_list",
+>                 "/proc/timer_stats",
+>                 "/proc/sched_debug",
+>                 "/proc/scsi",
+>                 "/sys/firmware",
+>                 "/sys/devices/virtual/powercap"
+>             ],
+>             "ReadonlyPaths": [
+>                 "/proc/bus",
+>                 "/proc/fs",
+>                 "/proc/irq",
+>                 "/proc/sys",
+>                 "/proc/sysrq-trigger"
+>             ]
+>         },
+>         "GraphDriver": {
+>             "Data": {
+>                 "LowerDir": "/home/fedora/Documents/Virtual/Docker/overlay2/52695074692f7d113d7eca1a4b21071e0cb50c10d1673763830fa1cf556a6b24-init/diff:/home/fedora/Documents/Virtual/Docker/overlay2/ca2cdba847edc66f3693d4914673c0489179b64fec04e37eb7527b15208a4762/diff:/home/fedora/Documents/Virtual/Docker/overlay2/f6b7955b3379ddd6955aeeb7f736d2cc3353e57f2065068d29ce67d5ace75d52/diff:/home/fedora/Documents/Virtual/Docker/overlay2/83dd0f9ec2029aa91e38a3a284a70cabbfe3492ef0b5ec11d562fe9358a8985f/diff:/home/fedora/Documents/Virtual/Docker/overlay2/9aeb1e8c2e362cd971acfcd1e4ccb66afc25aa2c82972f8bf9fb1ffdf7d12725/diff:/home/fedora/Documents/Virtual/Docker/overlay2/7086e9817879c947274f0533e56ab8cbb84d2c26c7b0c646cf601da202caf78b/diff:/home/fedora/Documents/Virtual/Docker/overlay2/8d8335af63fc401d3b09ca8841f305acb932f38f89596d97d6da4d511fbd57cc/diff:/home/fedora/Documents/Virtual/Docker/overlay2/b293148f61b2e36148c98644f90e352c1efec99b76d68e3d975447d252c00778/diff",
+>                 "MergedDir": "/home/fedora/Documents/Virtual/Docker/overlay2/52695074692f7d113d7eca1a4b21071e0cb50c10d1673763830fa1cf556a6b24/merged",
+>                 "UpperDir": "/home/fedora/Documents/Virtual/Docker/overlay2/52695074692f7d113d7eca1a4b21071e0cb50c10d1673763830fa1cf556a6b24/diff",
+>                 "WorkDir": "/home/fedora/Documents/Virtual/Docker/overlay2/52695074692f7d113d7eca1a4b21071e0cb50c10d1673763830fa1cf556a6b24/work"
+>             },
+>             "Name": "overlay2"
+33,34c138
+<         "DockerVersion": "",
+<         "Author": "",
+---
+>         "Mounts": [],
+36c140
+<             "Hostname": "",
+---
+>             "Hostname": "6a4918c57222",
+45c149
+<             "Tty": false,
+---
+>             "Tty": true,
+59,60c163
+<             "ArgsEscaped": true,
+<             "Image": "",
+---
+>             "Image": "nginx:latest",
+72,80c175,180
+<         "Architecture": "amd64",
+<         "Os": "linux",
+<         "Size": 186721003,
+<         "GraphDriver": {
+<             "Data": {
+<                 "LowerDir": "/home/fedora/Documents/Virtual/Docker/overlay2/f6b7955b3379ddd6955aeeb7f736d2cc3353e57f2065068d29ce67d5ace75d52/diff:/home/fedora/Documents/Virtual/Docker/overlay2/83dd0f9ec2029aa91e38a3a284a70cabbfe3492ef0b5ec11d562fe9358a8985f/diff:/home/fedora/Documents/Virtual/Docker/overlay2/9aeb1e8c2e362cd971acfcd1e4ccb66afc25aa2c82972f8bf9fb1ffdf7d12725/diff:/home/fedora/Documents/Virtual/Docker/overlay2/7086e9817879c947274f0533e56ab8cbb84d2c26c7b0c646cf601da202caf78b/diff:/home/fedora/Documents/Virtual/Docker/overlay2/8d8335af63fc401d3b09ca8841f305acb932f38f89596d97d6da4d511fbd57cc/diff:/home/fedora/Documents/Virtual/Docker/overlay2/b293148f61b2e36148c98644f90e352c1efec99b76d68e3d975447d252c00778/diff",
+<                 "MergedDir": "/home/fedora/Documents/Virtual/Docker/overlay2/ca2cdba847edc66f3693d4914673c0489179b64fec04e37eb7527b15208a4762/merged",
+<                 "UpperDir": "/home/fedora/Documents/Virtual/Docker/overlay2/ca2cdba847edc66f3693d4914673c0489179b64fec04e37eb7527b15208a4762/diff",
+<                 "WorkDir": "/home/fedora/Documents/Virtual/Docker/overlay2/ca2cdba847edc66f3693d4914673c0489179b64fec04e37eb7527b15208a4762/work"
+---
+>         "NetworkSettings": {
+>             "Bridge": "",
+>             "SandboxID": "44da7bc0bd7bc1288c69f47adc84b73a57c2b1155ddf7382b041767cde08978f",
+>             "SandboxKey": "/var/run/docker/netns/44da7bc0bd7b",
+>             "Ports": {
+>                 "80/tcp": null
+82,97c182,212
+<             "Name": "overlay2"
+<         },
+<         "RootFS": {
+<             "Type": "layers",
+<             "Layers": [
+<                 "sha256:a483da8ab3e941547542718cacd3258c6c705a63e94183c837c9bc44eb608999",
+<                 "sha256:4d99aab1eed40f7d5bad3ce7eed0b38398f24ce92aafed26255d05f7c53bb748",
+<                 "sha256:c1b1bf2f95dc3bb29300de9673bc7d0d7c8d1554245989750010bd0dd32fad6e",
+<                 "sha256:ab75a0b61bd1948ea56d85ac5b777b6c2bb99c1694fd0568d25172b091f82667",
+<                 "sha256:b7df9f234b503f0bf1c40a01b3c06b470d7843b85b02b0152050b86e04825a8d",
+<                 "sha256:93b4c8c4ac05245f580b994d162455a525326500a6b2ff27332089d0c4b7fac7",
+<                 "sha256:fd31601f0be4b8919d2c573783443f22fd494311e9e3d839e1dd7c9c8698ea74"
+<             ]
+<         },
+<         "Metadata": {
+<             "LastTagTime": "0001-01-01T00:00:00Z"
+---
+>             "HairpinMode": false,
+>             "LinkLocalIPv6Address": "",
+>             "LinkLocalIPv6PrefixLen": 0,
+>             "SecondaryIPAddresses": null,
+>             "SecondaryIPv6Addresses": null,
+>             "EndpointID": "3a51f6bf934294c6fd12ea173597ccb34df570de28506611f322a1e9eb5501ce",
+>             "Gateway": "172.17.0.1",
+>             "GlobalIPv6Address": "",
+>             "GlobalIPv6PrefixLen": 0,
+>             "IPAddress": "172.17.0.3",
+>             "IPPrefixLen": 16,
+>             "IPv6Gateway": "",
+>             "MacAddress": "02:42:ac:11:00:03",
+>             "Networks": {
+>                 "bridge": {
+>                     "IPAMConfig": null,
+>                     "Links": null,
+>                     "Aliases": null,
+>                     "MacAddress": "02:42:ac:11:00:03",
+>                     "NetworkID": "ea578860d0acac0213d103e00a28fbfcde7eb025f16666ef090105d8721bbf72",
+>                     "EndpointID": "3a51f6bf934294c6fd12ea173597ccb34df570de28506611f322a1e9eb5501ce",
+>                     "Gateway": "172.17.0.1",
+>                     "IPAddress": "172.17.0.3",
+>                     "IPPrefixLen": 16,
+>                     "IPv6Gateway": "",
+>                     "GlobalIPv6Address": "",
+>                     "GlobalIPv6PrefixLen": 0,
+>                     "DriverOpts": null,
+>                     "DNSNames": null
+>                 }
+>             }
