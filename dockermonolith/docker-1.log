@@ -10,7 +10,16 @@ hello-world                 latest     d2c94e258dcb   11 months ago   13.3kB
 confluentinc/cp-kafka       7.3.2      da23a46211ad   13 months ago   832MB
 confluentinc/cp-zookeeper   7.3.2      8a091961522e   13 months ago   832MB
 
+one_to_one_nat:
+        address: 62.84.117.196
+
+
 diff image_nginx.json cont_nginx.json >> docker-1.log
+1. Сетевая атребутика
+2. PID
+3. Папки монтирования.
+4. Атрибутика системных папок "/proc", железа
+
 
 3,5c3,9   
 <         "Id": "sha256:92b11f67642b62bbb98e7e49169c346b30e20cd3c1c034d31087e46924b9312e",
