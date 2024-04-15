@@ -1,0 +1,8 @@
+cont_nginx.json
+db_config
+docker-1.log
+Dockerfile
+docker-machine
+image_nginx.json
+mongod.conf
+start.sh
