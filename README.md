@@ -2,7 +2,7 @@
 
     Выполня развертывание на своих серверах, использовался Proxmox. Так как не оплачен YandexCloud. 
 
-    Ниже весь набор комманд для мастер ноды ниже.
+    Ниже весь набор комманд для мастер ноды ниже. 
 
    34  cat /etc/os-release 
    35  wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.12/cri-dockerd_0.3.12.3-0.debian-bookworm_amd64.deb
