@@ -6,7 +6,7 @@ services:
     volumes:
       - post_db:/data/db
     networks:
-      - back
+      - backend
   ui:
     build: ./ui
     image: ${USR}/ui:${TAG}
@@ -14,21 +14,21 @@ services:
     ports:
       - ${PORT}:${PORT}/tcp
     networks:
-      - front
+      - frontend
   post:
     build: ./post-py
     image: ${USR}/post:${TAG}
     container_name: post
     networks:
-      - front
-      - back
+      - frontend
+      - backend
   comment:
     build: ./comment
     image: ${USR}/comment:${TAG}
     container_name: comment
     networks:
-      - front
-      - back
+      - frontend
+      - backend
 
 volumes:
   post_db:
@@ -40,14 +40,14 @@ networks:
   frontend:
     # Use a custom driver
     driver: bridge
-    name: front
+    # name: front
     ipam:      
       config:
         - subnet: 10.0.1.0/24
   backend:
     # Use a custom driver which takes special options
     driver: bridge
-    name: back
+    # name: back
     ipam:      
       config:
         - subnet: 10.0.2.0/24
