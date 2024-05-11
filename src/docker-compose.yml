@@ -6,7 +6,7 @@ services:
     volumes:
       - post_db:/data/db
     networks:
-      - backend
+      - back
   ui:
     build: ./ui
     image: ${USR}/ui:${TAG}
@@ -14,21 +14,21 @@ services:
     ports:
       - ${PORT}:${PORT}/tcp
     networks:
-      - frontend
+      - front
   post:
     build: ./post-py
     image: ${USR}/post:${TAG}
     container_name: post
     networks:
-      - frontend
-      - backend
+      - front
+      - back
   comment:
     build: ./comment
     image: ${USR}/comment:${TAG}
     container_name: comment
     networks:
-      - frontend
-      - backend
+      - front
+      - back
 
 volumes:
   post_db:
