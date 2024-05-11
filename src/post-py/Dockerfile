@@ -1,6 +1,6 @@
 FROM python:3.6.0-alpine
 
-RUN apk --no-cache --update add build-base gcc musl-dev ca-certificates
+RUN apk --no-cache --update add build-base gcc musl-dev
 
 WORKDIR /app
 ADD . /app
