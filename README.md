@@ -1,10 +1,11 @@
-# 27.Введение в Kubernetes #1
+# 28.Введение в Kubernetes #1
 
     Выполня развертывание на своих серверах, использовался Proxmox. Так как не оплачен YandexCloud. 
 
     Ниже весь набор комманд для мастер ноды ниже. 
 
-   34  cat /etc/os-release 
+```bash
+34  cat /etc/os-release 
    35  wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.12/cri-dockerd_0.3.12.3-0.debian-bookworm_amd64.deb
    36  ls
    37  sudo dpkg -i cri-dockerd_0.3.12.3-0.debian-bookworm_amd64.deb 
@@ -290,4 +291,4 @@
   317  sudo nano /etc/kubernetes/admin.conf 
   318  kubectl get pods
   319  kubectl describe pods
-
+```
