@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: post-db
+  name: post
   labels:
     app: reddit
     component: post

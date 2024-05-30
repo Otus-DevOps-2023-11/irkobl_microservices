@@ -6,7 +6,7 @@ metadata: # Блок метаданных деплоя
     app: reddit
     component: ui
 spec: # Блок спецификации деплоя
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: reddit
@@ -19,8 +19,8 @@ spec: # Блок спецификации деплоя
         component: ui
     spec:
       containers:
-      - image: storik/ui:1.0 # Не забудьте подставить свой образ
-        name: ui
+      - image: ilkor8183002/ui:1.0 # Не забудьте подставить свой образ
+        name: ui        
         env:
         - name: ENV
           valueFrom:
