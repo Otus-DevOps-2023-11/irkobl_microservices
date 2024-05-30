@@ -1,0 +1,53 @@
+version: '3.3'
+services:
+  post_db:
+    image: mongo:${M_TAG}
+    container_name: db
+    volumes:
+      - post_db:/data/db
+    networks:
+      - backend
+  ui:
+    build: ./ui
+    image: ${USR}/ui:${TAG}
+    container_name: ui
+    ports:
+      - ${PORT}:${PORT}/tcp
+    networks:
+      - frontend
+  post:
+    build: ./post-py
+    image: ${USR}/post:${TAG}
+    container_name: post
+    networks:
+      - frontend
+      - backend
+  comment:
+    build: ./comment
+    image: ${USR}/comment:${TAG}
+    container_name: comment
+    networks:
+      - frontend
+      - backend
+
+volumes:
+  post_db:
+
+# networks:
+#   reddit:
+
+networks:
+  frontend:
+    # Use a custom driver
+    driver: bridge
+    # name: front
+    ipam:      
+      config:
+        - subnet: 10.0.1.0/24
+  backend:
+    # Use a custom driver which takes special options
+    driver: bridge
+    # name: back
+    ipam:      
+      config:
+        - subnet: 10.0.2.0/24
