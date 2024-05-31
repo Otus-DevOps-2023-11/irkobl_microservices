@@ -6,7 +6,7 @@ metadata:
     app: redit
     component: post-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: reddit
@@ -19,7 +19,7 @@ spec:
         component: post-deployment
     spec:
       containers:
-      - image: storik/post:1.0
+      - image: ilkor8183002/post:1.1
         name: post
         env:
         - name: POST_DATABASE_HOST
