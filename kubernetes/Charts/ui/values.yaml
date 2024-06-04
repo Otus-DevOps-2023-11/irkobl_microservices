@@ -1,0 +1,8 @@
+---
+service:
+  internalPort: 9292
+  externalPort: 9292
+
+image:
+  repository: 192.168.222.10:8086/otus/ui:1.0
+  tag: latest
