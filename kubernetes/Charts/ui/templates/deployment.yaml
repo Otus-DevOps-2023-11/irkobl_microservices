@@ -22,10 +22,10 @@ spec: # Блок спецификации деплоя
         release: {{ .Release.Name }}
     spec:
       containers:
-      - image: 192.168.222.10:8086/ui:1.0 # Не забудьте подставить свой образ
+      - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}" # Не забудьте подставить свой образ
         name: ui
         ports:
-        - containerPort: 9292
+        - containerPort: {{ .Values.service.internalPort }}
           name: ui
           protocol: TCP
         env:

@@ -12,7 +12,7 @@ spec:
       - app.ui
     secretName: ui-ingress
   rules:
-  - host: app.aa
+  - host: app.ui
     http:
       paths:
       - path: /
@@ -21,4 +21,4 @@ spec:
           service:
             name: {{ .Release.Name }}-{{ .Chart.Name }}
             port:
-              number: 9292
+              number:  {{ .Values.service.externalPort }}
