@@ -9,7 +9,7 @@ dependencies:
   repository: file://../comment
   version: 1.0.0
 - name: mongodb
-  repository: https://charts.bitnami.com/bitnami
-  version: 15.6.6
-digest: sha256:19fde3c9465dab7ac9b9e745b0ce2f2d79f4c6a9661aff871c198dc929384356
-generated: "2024-06-15T01:35:34.42312067+08:00"
+  repository: https://charts.helm.sh/stable
+  version: 7.8.10
+digest: sha256:9e083ceed6385255a70b0ece5267416b12e2bf229502c92777ac9f3fb07fce39
+generated: "2024-06-16T21:13:07.166238615+08:00"
