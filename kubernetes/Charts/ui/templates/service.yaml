@@ -18,8 +18,7 @@ spec:
   # - name: http
   #   port: {{ .Values.service.externalPort }}
   #   protocol: TCP
-  #   targetPort: {{ .Values.service.internalPort }}
-  type: LoadBalancer
+  #   targetPort: {{ .Values.service.internalPort }}  
   ports:  
   - port: {{ .Values.service.externalPort }}
     protocol: TCP
